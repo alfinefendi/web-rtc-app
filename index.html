@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web RTC</title>
+    <style>
+        #my-video {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="share">share my audio & video stream</button>
+    <button id="show-video">show</button>
+    <button id="stop-video">stop</button>
+    <div>
+        <button id="change-video-size" onclick="changeVideoSize()">change video size</button>
+        <input type="text" id="video-width" value="500">
+        <input type="text" id="video-height" value="200">
+    </div>
+    <button id="start-record" onclick="startRecord()">start</button>
+    <button id="stop-record" onclick="stopRecord()">stop</button>
+    <button id="play-record" onclick="playRecord()">play</button>
+    <div>
+        <h3>My Feed</h3>
+        <video id="my-video" autoplay playsinline></video>
+    </div>
+    <div>
+        <h3>Other Feed</h3>
+        <video id="other-video" autoplay playsinline></video>
+    </div>
+    <script src="script.js"></script>
+    <script src="changeVideoSize.js"></script>
+    <script src="videoRecorder.js"></script>
+</body>
+</html>
